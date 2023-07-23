@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2743a24-8e80-4907-895e-959e0c192996" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Users/Users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserFinder/UserFinder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/Demo/MyParagraph.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/Form.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/Form.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nav/Nav.css" beforeDir="false" />
@@ -66,6 +67,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowChatGPT.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/React_Learning/IJSE/react-intro",
     "list.type.of.created.stylesheet": "CSS",
@@ -74,6 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.obiscr.chatgpt.settings.GPT3-3.5-Turbo",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,7 +98,7 @@
       <workItem from="1681010975641" duration="3000" />
       <workItem from="1682006696600" duration="38000" />
       <workItem from="1682130963585" duration="73000" />
-      <workItem from="1690002005065" duration="16980000" />
+      <workItem from="1690002005065" duration="22156000" />
     </task>
     <servers />
   </component>
