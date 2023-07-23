@@ -45,6 +45,7 @@ function App() {
         fetchMovieHandler();
     }, [fetchMovieHandler]);
 
+    //Post Request Firebase Database
     const addMovieHandler = async (movie)=> {
         const response = await fetch('https://react-http-92682-default-rtdb.firebaseio.com/movies.json',{
             method:'POST',
