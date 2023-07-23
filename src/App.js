@@ -1,24 +1,33 @@
 import React from 'react';
-import './App.css';
-import UserFinder from "./components/UserFinder/UserFinder";
-import UsersContext from "./components/Store/UsersContext";
 
-const DUMMY_USERS = [
-    {id: 'u1', name: 'Max'},
-    {id: 'u2', name: 'Manuel'},
-    {id: 'u3', name: 'Julie'},
-];
+import MoviesList from './components/MovieList/MovieList';
+import './App.css';
+
 function App() {
-    const usersContext ={
-        users:DUMMY_USERS
-    }
+    const dummyMovies = [
+        {
+            id: 1,
+            title: 'Some Dummy Movie',
+            openingText: 'This is the opening text of the movie',
+            releaseDate: '2021-05-18',
+        },
+        {
+            id: 2,
+            title: 'Some Dummy Movie 2',
+            openingText: 'This is the second opening text of the movie',
+            releaseDate: '2021-05-19',
+        },
+    ];
 
     return (
-        <div>
-            <UsersContext.Provider value={usersContext}>
-                <UserFinder/>
-            </UsersContext.Provider>
-        </div>
+        <React.Fragment>
+            <section>
+                <button>Fetch Movies</button>
+            </section>
+            <section>
+                <MoviesList movies={dummyMovies} />
+            </section>
+        </React.Fragment>
     );
 }
 
