@@ -8,6 +8,7 @@ function App() {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    /** Fetching data using fetch method and URL*/
     async function fetchMovieHandler() {
         setIsLoading(true);
         setError(null)
@@ -33,6 +34,7 @@ function App() {
         setIsLoading(false);
     }
 
+    /** Checking few conditions for response*/
     let content = <p>Found No Movies ... 😥</p>
     if (isLoading) {
         content = <p>🔃Loading ...</p>
