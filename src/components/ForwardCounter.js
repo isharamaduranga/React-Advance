@@ -1,18 +1,12 @@
-import { useState, useEffect } from 'react';
-import Card from "./AddMovie/Card";
+
+import Card from "./Card/Card";
+import useCounter from "./hooks/useCounter";
 
 
 
 const ForwardCounter = () => {
-    const [counter, setCounter] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCounter((prevCounter) => prevCounter + 1);
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
+    const counter = useCounter(true);
 
     return <Card>{counter}</Card>;
 };
