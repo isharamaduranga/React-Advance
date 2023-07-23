@@ -16,18 +16,23 @@
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddMovie/AddMovie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddMovie/AddMovie.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Demo/DemoList.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Demo/DemoList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Demo/DemoOutput.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Demo/MyParagraph.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ErrorBoundary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Movie/Movie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Movie/Movie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieList/MovieList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieList/MovieList.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Store/UsersContext.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/User/User.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/User/User.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserFinder/UserFinder.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserFinder/UserFinder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieList/MovieList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/Form.css" beforeDir="false" />
@@ -52,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -105,7 +110,7 @@
       <workItem from="1681010975641" duration="3000" />
       <workItem from="1682006696600" duration="38000" />
       <workItem from="1682130963585" duration="73000" />
-      <workItem from="1690002005065" duration="40016000" />
+      <workItem from="1690002005065" duration="40729000" />
     </task>
     <servers />
   </component>
