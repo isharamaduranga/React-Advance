@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import  './User.css'
 class User extends Component{
+
+    componentWillUnmount() {
+        console.log('calling component Will Unmount')
+    }
     render() {
         return(
         <li className={'user'}>
@@ -15,5 +19,4 @@ class User extends Component{
     return<li className='user'> {props.name} </li>;
 };
  */
-
 export default User;

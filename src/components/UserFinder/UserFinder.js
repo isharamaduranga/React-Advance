@@ -1,22 +1,20 @@
 import {Component, Fragment} from 'react';
 import Users from "../Users/Users";
 import './UserFinder.css'
-
-const DUMMY_USERS = [
-    {id: 'u1', name: 'Max'},
-    {id: 'u2', name: 'Manuel'},
-    {id: 'u3', name: 'Julie'},
-];
+import UsersContext from "../Store/UsersContext";
+import ErrorBoundary from "../ErrorBoundary";
 
 class UserFinder extends Component {
+
+    static contextType = UsersContext;
     constructor() {
         super();
-
         this.state={
-            filteredUsers:DUMMY_USERS,
+            filteredUsers:[],
             searchTerm: ''
         }
     }
+
 
     searchChangeHandler(event) {
         this.setState({
@@ -26,19 +24,28 @@ class UserFinder extends Component {
      componentDidUpdate(prevProps, prevState,snapshot) {
          if (prevState.searchTerm !== this.state.searchTerm){
              this.setState({
-                 filteredUsers: DUMMY_USERS.filter((user) =>
-                     user.name.includes(this.state.searchTerm))
+                 filteredUsers: this.context.users.filter((user) =>
+                     user.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
              })
          }
      }
+     componentDidMount() {
+         this.setState({
+             filteredUsers:this.context.users
+         })
+     }
     render() {
         return (
-            <Fragment>
-                <div className='finder'>
-                    <input type='search' onChange={this.searchChangeHandler.bind(this)}/>
-                </div>
-                <Users users={this.state.filteredUsers}/>
-            </Fragment>
+                <Fragment>
+                    <div className='finder'>
+                        <input type='search' onChange={this.searchChangeHandler.bind(this)}/>
+                    </div>
+                    <ErrorBoundary>
+                    <Users users={this.state.filteredUsers}/>
+                    </ErrorBoundary>
+                </Fragment>
+
+
         );
     }
 }
