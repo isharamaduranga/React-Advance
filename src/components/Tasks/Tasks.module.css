@@ -1,0 +1,21 @@
+.container {
+  text-align: center;
+}
+
+.container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.task {
+  border-bottom: 1px solid #1f1a1a;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.task:last-of-type {
+  border-bottom: none;
+}

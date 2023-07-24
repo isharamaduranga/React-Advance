@@ -1,23 +1,64 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, {useEffect, useState} from 'react';
 
-import './App.css';
-import DemoList from './components/Demo/DemoList';
-import Button from './components/UI/Button/Button';
+import Tasks from './components/Tasks/Tasks';
+import NewTask from './components/NewTask/NewTask';
 
 function App() {
-    const [listTitle, setListTitle] = useState('My List');
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [tasks, setTasks] = useState([]);
 
-    const changeTitleHandler = useCallback(() => {
-        setListTitle('New Title');
+    const fetchTasks = async (taskText) => {
+        setIsLoading(true);
+        setError(null);
+        try {
+
+                const response = await fetch(
+                'https://react-http-92682-default-rtdb.firebaseio.com/tasks.json'
+            );
+
+            if (!response.ok) {
+                throw new Error('Request failed!');
+            }
+
+            const data = await response.json();
+
+            const loadedTasks = [];
+
+            for (const taskKey in data) {
+                loadedTasks.push(
+                    {
+                      id: taskKey,
+                      text: data[taskKey].text
+                    }
+                );
+            }
+
+            setTasks(loadedTasks);
+        } catch (err) {
+            setError(err.message || 'Something went wrong!');
+        }
+        setIsLoading(false);
+    };
+
+    useEffect(() => {
+        fetchTasks();
     }, []);
 
-    const listItems = useMemo(() => [5, 3, 1, 10, 9], []);
+    const taskAddHandler = (task) => {
+        setTasks((prevTasks) => prevTasks.concat(task));
+    };
 
     return (
-        <div className="app">
-            <DemoList title={listTitle} items={listItems} />
-            <Button onClick={changeTitleHandler}>Change List Title</Button>
-        </div>
+        <React.Fragment>
+            <NewTask onAddTask={taskAddHandler}/>
+            <Tasks
+                items={tasks}
+                loading={isLoading}
+                error={error}
+                onFetch={fetchTasks}
+            />
+        </React.Fragment>
     );
 }
 
